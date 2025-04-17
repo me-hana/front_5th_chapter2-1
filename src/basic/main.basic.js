@@ -4,10 +4,11 @@ import { ID } from '../constant/id';
 import { CLASS } from '../constant/class';
 import { PRODUCT_LIST } from '../constant/product';
 import { DISCOUNT } from '../constant/discount';
+import { MESSAGE } from '../constant/message';
 
 import { CalculateCart } from './component/CalculateCart';
 import { StockInfo } from './component/StockInfo';
-import { getFlashSaleMessage, getSuggestMessage, MESSAGE } from './util/messageUtil';
+import { getFlashSaleMessage, getSuggestMessage } from './util/messageUtil';
 import { CartItem } from './component/CartItem';
 
 let sel, addBtn, cartDisp, sum, stockInfo;

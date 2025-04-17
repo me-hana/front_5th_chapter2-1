@@ -3,7 +3,3 @@ export const getFlashSaleMessage = (productName) =>
 
 export const getSuggestMessage = (productName) =>
   `${productName}은(는) 어떠세요? 지금 구매하시면 5% 추가 할인!`;
-
-export const MESSAGE = {
-  OUT_OF_STOCK: '재고가 부족합니다.',
-};
