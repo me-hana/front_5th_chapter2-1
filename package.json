@@ -1,4 +1,5 @@
 {
+  "homepage": "https://me-hana.github.io/front_5th_chapter2-1/",
   "name": "front-5th-chapter2-1",
   "private": true,
   "version": "0.0.0",
@@ -12,7 +13,9 @@
     "test": "vitest",
     "test:basic": "vitest basic.test.js",
     "test:advanced": "vitest advanced.test.js",
-    "test:ui": "vitest --ui"
+    "test:ui": "vitest --ui",
+    "predeploy": "pnpm run build",
+    "deploy": "gh-pages -d dist"
   },
   "devDependencies": {
     "@eslint/js": "^9.24.0",
@@ -31,7 +34,8 @@
     "jsdom": "^26.0.0",
     "prettier": "^3.5.3",
     "vite": "^6.2.6",
-    "vitest": "^3.1.1"
+    "vitest": "^3.1.1",
+    "gh-pages": "^6.3.0"
   },
   "dependencies": {
     "react": "^19.1.0",
