@@ -21,6 +21,7 @@ export default [
         prompt: 'readonly',
         setTimeout: 'readonly',
         setInterval: 'readonly',
+        clearInterval: 'readonly',
         Node: 'readonly',
         console: 'readonly',
       },
