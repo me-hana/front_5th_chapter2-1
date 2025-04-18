@@ -36,6 +36,8 @@ export default [
       prettier: prettierPlugin,
     },
     rules: {
+      'no-undef': 'error',
+      'no-unused-vars': 'warn',
       'prettier/prettier': 'error',
       ...prettierConfig.rules,
     },

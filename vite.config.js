@@ -5,7 +5,7 @@ import path from 'path';
 const isCI = process.env.CI === 'true';
 
 export default defineConfig({
-  base: isCI ? '' : '/front_5th_chapter2-1/',
+  // base: isCI ? '' : '/front_5th_chapter2-1/',
   plugins: [react()],
   root: '.',
   build: {
@@ -13,6 +13,7 @@ export default defineConfig({
       input: {
         basic: path.resolve(__dirname, 'index.basic.html'),
         advanced: path.resolve(__dirname, 'index.advanced.html'),
+        retry: path.resolve(__dirname, 'index.retry.html'),
       },
     },
   },
