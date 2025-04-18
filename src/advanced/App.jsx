@@ -6,6 +6,7 @@ import CalculateCart from './component/CalculateCart';
 import { PRODUCT_LIST as initialProducts } from '../constant/product';
 import { DISCOUNT } from '../constant/discount';
 import { MESSAGE } from '../constant/message';
+import { getFlashSaleMessage, getSuggestMessage } from '../basic/util/messageUtil';
 
 export default function App() {
   const [products, setProducts] = useState(initialProducts);
@@ -118,7 +119,7 @@ export default function App() {
     const flashTimer = setInterval(() => {
       const lucky = products[Math.floor(Math.random() * products.length)];
       if (Math.random() < DISCOUNT.FLASH_SALE_PROBABILITY && lucky.quantity > 0) {
-        alert(MESSAGE.FLASH_SALE(lucky.name));
+        alert(getFlashSaleMessage(lucky.name));
         lucky.price = Math.round(lucky.price * (1 - DISCOUNT.FLASH_SALE_DISCOUNT_RATE));
         setProducts([...products]);
       }
@@ -128,7 +129,7 @@ export default function App() {
       if (!lastSelected) return;
       const suggest = products.find((p) => p.id !== lastSelected && p.quantity > 0);
       if (suggest) {
-        alert(MESSAGE.SUGGEST(suggest.name));
+        alert(getSuggestMessage(suggest.name));
         suggest.price = Math.round(suggest.price * (1 - DISCOUNT.SUGGESTION_DISCOUNT_RATE));
         setProducts([...products]);
       }
